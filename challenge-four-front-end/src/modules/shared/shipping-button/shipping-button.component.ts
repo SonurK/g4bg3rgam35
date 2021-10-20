@@ -14,8 +14,7 @@ export class ShippingButtonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit = () => null;
 
   onClickButton(event) {
     this.buttonClicked.emit(event);
