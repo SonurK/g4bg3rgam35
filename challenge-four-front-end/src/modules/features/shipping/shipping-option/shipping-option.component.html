@@ -1,0 +1,18 @@
+<h4>
+  Select a shipping option
+</h4>
+
+
+<form>
+  <mat-form-field class="shipping-input-full-width">
+    <mat-label>Shipping Option</mat-label>
+    <mat-select (selectionChange)="optionSelected($event)" [formControl]="optionFormControl">
+      <mat-option *ngFor="let option of listOfOptions" [value]="option.value">{{option.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+
+<p class="shipping-warn-text" *ngIf="!errorMark">
+  You must select an option
+</p>

@@ -1,0 +1,15 @@
+<h4>
+  Enter shipping weight
+</h4>
+
+<!-- <app-shipping-input inputTitle="Weight"></app-shipping-input> -->
+
+<form>
+  <mat-form-field class="shipping-input-full-width">
+    <input matInput placeholder="*Weight" [formControl]="weightFormControl">
+  </mat-form-field>
+</form>
+
+<p class="shipping-warn-text" *ngIf="!errorMark">
+  The field <strong>Weight</strong> is obligatory and must be a number
+</p>

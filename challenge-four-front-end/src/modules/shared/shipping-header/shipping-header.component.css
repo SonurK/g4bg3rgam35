@@ -1,0 +1,12 @@
+section {
+    display: flex;
+    align-items: center;
+}
+
+h5 {}
+
+p {
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+}

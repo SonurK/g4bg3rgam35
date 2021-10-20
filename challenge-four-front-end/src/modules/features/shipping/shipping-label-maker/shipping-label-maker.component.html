@@ -1,0 +1,49 @@
+<div class="shipping-maker">
+  <div class="user">
+    <span class="user-info">
+      Logged as: {{loggedUser}}
+    </span>
+    <span (click)="logout()" class="user-logout">
+      Logout
+    </span>
+  </div>
+  
+  <h1 class="shipping-maker-title">
+    Shipping Label Maker
+  </h1>
+
+  <section class="shipping-maker-box">
+    <app-shipping-header [step]="currentStep"></app-shipping-header>
+
+    <!-- SENDER ADDRESS -->
+    <app-shipping-sender-address *ngIf="currentStep == 0"></app-shipping-sender-address>
+
+    <!-- RECIEVER ADDRESS -->
+    <app-shipping-receiver-address *ngIf="currentStep == 1"></app-shipping-receiver-address>
+
+    <!-- SHIPPING WEIGHT -->
+    <app-shipping-weight *ngIf="currentStep == 2"></app-shipping-weight>
+
+    <!-- OPTION TYPE -->
+    <app-shipping-option *ngIf="currentStep == 3"></app-shipping-option>
+
+    <!-- SHIPPING RESULT -->
+    <app-shipping-label *ngIf="currentStep == 4" [objectShippingResult]="objectResult"></app-shipping-label>
+
+    <br>
+    <div class="shipping-maker-buttons">
+      <div *ngIf="currentStep != 4">
+        <app-shipping-button (buttonClicked)="registerAction(wizardButtonAction.Prev)" buttonTitle="Previous">
+        </app-shipping-button>
+        <app-shipping-button (buttonClicked)="registerAction(wizardButtonAction.Next)" buttonTitle="Next">
+        </app-shipping-button>
+      </div>
+      <div *ngIf="currentStep == 4">
+        <app-shipping-button (buttonClicked)="registerAction(wizardButtonAction.End)" buttonTitle="Finish">
+        </app-shipping-button>
+      </div>
+    </div>
+
+    <!-- <app-shipping-button (buttonClicked)="testUser()" buttonTitle="TEST"></app-shipping-button> -->
+  </section>
+</div>

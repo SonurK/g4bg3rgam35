@@ -1,0 +1,36 @@
+<p>product-definition works!</p>
+
+<!-- product/resume
+<br>
+Will load the component on the same page
+<br><br>
+product/final
+<br>
+Will load the component on a new page -->
+
+<section>
+    <h3>
+        Pokedex
+    </h3>
+    <h4>
+        Name:
+    </h4>
+    <span *ngIf="pokedex.length == 0">
+        Loading...
+    </span>
+    <div *ngFor="let poke of pokedex; let i = index" [ngClass]="{'item-strong': i % 2 == 0 ? true : false, 'item-light': !(i % 2 == 0) }">
+        {{ i + 1 }} -
+        <span [ngStyle]="{'color': i % 2 == 0 ? 'blue' : 'red' }">
+            {{ poke.name }}
+        </span>
+    </div>
+</section>
+
+<router-outlet></router-outlet>
+
+<!-- <span [ngStyle]="{'color': pokedex[i].name == 'national' ? 'blue' : 'red' }"> -->
+
+<!-- https://angular.io/guide/template-syntax -->
+<!-- <span [ngStyle]="{'color': i % 2 == 0 ? 'blue' : 'red' }">
+<span (click)="{'color': i % 2 == 0 ? 'blue' : 'red' }">
+<span [(ngModel)] = "VARIABLE"> -->

@@ -1,0 +1,24 @@
+<h1>
+    {{ objectComponentBuilder.name ? objectComponentBuilder.name : 'lol' }}
+</h1>
+
+<p>{{ objectComponentBuilder.description ? objectComponentBuilder.description : 'lol' }}</p>
+
+<form>
+
+    <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" (dateInput)="addEvent('input', $event)"
+            (dateChange)="addEvent('change', $event)">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input type="text" placeholder="Size" aria-label="Number" matInput [formControl]="additionFormControl">
+    </mat-form-field>
+
+
+    <button mat-stroked-button color="primary">Add</button>
+
+</form>

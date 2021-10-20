@@ -1,0 +1,29 @@
+<section class="app-login-box">
+  <h1>
+    Welcome
+  </h1>
+
+  <form [formGroup]="loginUserForm">
+    <mat-form-field class="shipping-input-full-width">
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="shipping-input-full-width">
+      <input type="password" matInput placeholder="Password" formControlName="password">
+    </mat-form-field>
+  </form>
+
+  <p class="shipping-warn-text" *ngIf="errorMark">
+    Username or password incorrect
+  </p>
+
+  <br>
+
+  <div style="text-align:center">
+    <button class="login-button" mat-raised-button color="primary" [class.spinner]="loading" [disabled]="loading"
+      (click)="validateLogin()">Login</button>
+  </div>
+
+</section>
+
+<!-- <router-outlet></router-outlet> -->

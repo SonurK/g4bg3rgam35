@@ -1,0 +1,27 @@
+<h4>
+  Enter the receiver's address
+</h4>
+
+<form [formGroup]="shippingReceiverAddressForm">
+  <mat-form-field class="shipping-input-full-width">
+    <input matInput placeholder="Name" formControlName="name">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="shipping-input-full-width">
+    <input matInput placeholder="Street" formControlName="street">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="City" formControlName="city">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="*State" formControlName="state">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="*Zip" formControlName="zip">
+  </mat-form-field>
+</form>
+
+<p class="shipping-warn-text" *ngIf="!errorMark">
+  The fields <strong>State</strong> and <strong>Zip</strong> are obligatory
+</p>

@@ -1,0 +1,50 @@
+<h4>
+  Enter the sender's address
+</h4>
+
+<form [formGroup]="shippingSenderAddressForm">
+  <mat-form-field class="shipping-input-full-width">
+    <input matInput placeholder="*Name" formControlName="name">
+  </mat-form-field>
+  <br>
+  <mat-form-field class="shipping-input-full-width">
+    <input matInput placeholder="Street" formControlName="street">
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <input matInput placeholder="*City" formControlName="city">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="State" formControlName="state">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Zip" formControlName="zip">
+  </mat-form-field>
+</form>
+
+<p class="shipping-warn-text" *ngIf="!errorMark">
+  The fields
+  <strong>
+    Name
+  </strong>
+  and
+  <strong>
+    City
+  </strong>
+  are obligatory
+</p>
+
+<!-- 
+{
+  from: {
+  name: "John Smith", street: "131 Dartmouth St", city: "Boston",
+  state: "MA", zip: "02116"
+  },
+  to: {
+  name: "Linda Jackson", street: "40 Fulton St", city: "New York", state: "NY",
+  zip: "10038"
+  }
+  weight: 2
+  shippingOption:
+}
+   -->

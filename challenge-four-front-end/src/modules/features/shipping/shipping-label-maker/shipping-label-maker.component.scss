@@ -1,0 +1,30 @@
+.user {
+    margin-right: 5px;
+    color: gray;
+    font-family: monospace;
+    font-style: italic;
+
+    &-info {
+        position: absolute;
+        left: 0;
+    }
+
+    &-logout {
+        position: absolute;
+        right: 0;
+    }
+}
+
+.shipping-maker {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-title {
+        text-align: left;
+    }
+
+    &-buttons {
+        text-align: center;
+    }
+}
