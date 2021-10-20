@@ -10,12 +10,12 @@ const routes: Routes = [
   },
   {
     path: 'shipping',
-    loadChildren: '../modules/features/shipping/shipping.module#ShippingModule',
+    loadChildren: () => import('../modules/features/shipping/shipping.module').then(m => m.ShippingModule),
     canActivate: [AuthGuard]
   },
   {
     path: 'product',
-    loadChildren: '../modules/features/product/product.module#ProductModule'
+    loadChildren: () => import('../modules/features/product/product.module').then(m => m.ProductModule)
   },
   /* { path: 'shipping/shipping-label-maker/:name', component: ShippingLabelMakerComponent }, */
   { path: '', redirectTo: '/login', pathMatch: 'full' },
