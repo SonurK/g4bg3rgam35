@@ -3396,13 +3396,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-b34c10b8ac269e2c41cd6dc5874e4601",
+            "id": "module-AppRoutingModule-0af8dcd9d281946219dc87ae7e64f02b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { Routes, RouterModule } from '@angular/router';\nimport { LoginComponent } from '../modules/features/login/login.component';\nimport { AuthGuard } from '../guards/auth.guard';\n\nconst routes: Routes = [\n  {\n    path: 'login',\n    component: LoginComponent\n  },\n  {\n    path: 'shipping',\n    loadChildren: '../modules/features/shipping/shipping.module#ShippingModule',\n    canActivate: [AuthGuard]\n  },\n  {\n    path: 'product',\n    loadChildren: '../modules/features/product/product.module#ProductModule'\n  },\n  /* { path: 'shipping/shipping-label-maker/:name', component: ShippingLabelMakerComponent }, */\n  { path: '', redirectTo: '/login', pathMatch: 'full' },\n  { path: '**', redirectTo: '/login', pathMatch: 'full' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n\n}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { Routes, RouterModule } from '@angular/router';\nimport { LoginComponent } from '../modules/features/login/login.component';\nimport { AuthGuard } from '../guards/auth.guard';\n\nconst routes: Routes = [\n  {\n    path: 'login',\n    component: LoginComponent\n  },\n  {\n    path: 'shipping',\n    loadChildren: () => \"import('../modules/features/shipping/shipping.module').then(m => m.ShippingModule)\",\n    canActivate: [AuthGuard]\n  },\n  {\n    path: 'product',\n    loadChildren: () => \"import('../modules/features/product/product.module').then(m => m.ProductModule)\"\n  },\n  /* { path: 'shipping/shipping-label-maker/:name', component: ShippingLabelMakerComponent }, */\n  { path: '', redirectTo: '/login', pathMatch: 'full' },\n  { path: '**', redirectTo: '/login', pathMatch: 'full' }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule {\n\n}\n",
             "children": [
                 {
                     "type": "providers",
