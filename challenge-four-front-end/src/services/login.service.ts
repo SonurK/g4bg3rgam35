@@ -19,8 +19,7 @@ export class LoginService {
       }
     });
     if (user != undefined) {
-      let userExists = this.validatePassword(user, form);
-      return userExists;
+      return this.validatePassword(user, form);
     } else {
       return false;
     }

@@ -5,6 +5,12 @@ import { ShippingButtonComponent } from './shipping-button/shipping-button.compo
 import { ShippingHeaderComponent } from './shipping-header/shipping-header.component';
 import { ShippingSelectComponent } from './shipping-select/shipping-select.component';
 
+import { GeneralCtaComponent } from './general-cta/general-cta.component';
+import { GeneralInputComponent } from './general-input/general-input.component';
+import { GeneralItemBoxComponent } from './general-item-box/general-item-box.component';
+import { GeneralProfileComponent } from './general-profile/general-profile.component';
+import { GlobalHeaderComponent } from './global-header/global-header.component';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
@@ -17,12 +23,6 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    ShippingButtonComponent,
-    ShippingHeaderComponent,
-    ShippingSelectComponent,
-
-  ],
   imports: [
     CommonModule,
 
@@ -38,10 +38,28 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
   ],
+  declarations: [
+    ShippingButtonComponent,
+    ShippingHeaderComponent,
+    ShippingSelectComponent,
+
+    GeneralCtaComponent,
+    GeneralInputComponent,
+    GeneralItemBoxComponent,
+    GeneralProfileComponent,
+    GlobalHeaderComponent,
+
+  ],
   exports: [
     ShippingButtonComponent,
     ShippingHeaderComponent,
     ShippingSelectComponent,
+
+    GeneralCtaComponent,
+    GeneralInputComponent,
+    GeneralItemBoxComponent,
+    GeneralProfileComponent,
+    GlobalHeaderComponent,
 
     MatInputModule,
     MatButtonModule,

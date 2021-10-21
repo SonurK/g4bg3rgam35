@@ -1,5 +1,3 @@
-import { IUserMock } from 'src/interfaces/i.user-mock';
-
 export const LIST_PRODUCTS_MOCK: any = [
     {
         name: "1",

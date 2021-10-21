@@ -1,16 +1,16 @@
-# shipping-label-maker - CLIENT
+# challenge-four-front-end - CLIENT
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0
 
 ## Local versions
 This project is running and compiling with:
-node:                        10.16.0
-npm:                         6.9.0
-Angular CLI:                 9.0.1
+node:                        15.14.0
+npm:                         7.7.6
+Angular CLI:                 12.2.11
 angular-devkit/architect     0.900.1
-@angular-devkit/core         9.0.1
-@angular-devkit/schematics   9.0.1
-@schematics/angular          9.0.1
+@angular-devkit/core         12.2.11
+@angular-devkit/schematics   12.2.11
+@schematics/angular          12.2.11
 @schematics/update           0.803.20
 rxjs                         6.5.4
 
@@ -24,7 +24,7 @@ ng g c [componentname]
 
 ## Development server
 
-Run `ng s -o` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng s -o` or `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 the valid users in order to login into the app are:
 
@@ -95,35 +95,9 @@ app
 └───utils
 ```
 
-# shipping-label-maker - REQUIREMENTS
+# challenge-four-front-end - REQUIREMENTS
 
-1. Create a blank project called shipping-label-maker using angular-cli. 
-- DONE
-2. Scaffold a module called shared. Scaffold the WizardComponent inside the shared module. The shared module contains all the reusable UI components of your application. 
-- DONE
-3. Create a folder called features/shipping-label-maker. This is where you will create the ShippingLabelMaker component as well as the steps and the ShippingLabel component. The feature folder is intended for implementing application specific features. 
-- DONE
-4. Implement the basic Wizard component so that it can accept some steps and react to Prev, Next and End actions from the steps. Don’t worry about styling or passing wizardContext at this time. 
-- DONE
-5. Implement passing of the wizardContext and filling the sender’s address using the first step.
-- DONE
-6. Implement the remaining steps based on the wireframe provided. You should be able to fill in how the remaining steps look.
-- DONE
-7. [Bonus] Beautify your UI using raw CSS or any UI library of your choice.
-- DONE (using angular materal, custom .scss and .css files, thats why we can find a mixing of different style sheets)
-8. [Bonus] Add meaningful validations to your steps using FormsModule or
-ReactiveFormsModule.
-- DONE
-9. [Bonus] Write the following tests using the scaffolded test files:
-a. Wizard moves backwards and forwards based on actions sent by steps.
-b. Wizard calls complete() of the parent when a step sends the End action.
-c. Shipping Label maker prints the shipping label when complete() is called.
-d. Shipping cost is printed correctly as specified by the formula above.
-- PEDING
-10. [Bonus] Create a login screen that will authenticate the user using a username and password. The wizard should be shown only after successful authentication. Build the authentication part as a service + dialog.
-- DONE
-11. Update the README.md file to tell us anything special about your solution. This will help us evaluate your solution in the best light.
--DONE
+1. Your proposal must include a homepage, category pages, and product pages, plus a search page with the capability of searching for products by name. Each page must include its own metadata and favor the use of reusable components.​
 
 ## EN
 

@@ -7,10 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ShippingButtonComponent implements OnInit {
 
-
   @Input() buttonTitle: string;
   @Output() buttonClicked = new EventEmitter<any>();
-
 
   constructor() { }
 

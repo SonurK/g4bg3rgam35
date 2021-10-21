@@ -1,10 +1,36 @@
-.app-login-box {
+.app-login-page {
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
+    background-image: url("../../../assets/background-image/background.png");
+    background-size: cover;
+}
 
-    form {
-        width: 500px;
+.app-login-box {
+    position: relative;
+
+    &-title {
+        display: flex;
+        width: 850px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 244px;
+        background: #F2A47C 0% 0% no-repeat padding-box;
+        border-radius: 59px;
+        opacity: 0.9;
+        font-size: 40px;
+        color: white;
+    }
+
+    &-button {
+        position: absolute;
+        width: 100%;
+        top: 75%;
+        text-align: center;
     }
 }
 

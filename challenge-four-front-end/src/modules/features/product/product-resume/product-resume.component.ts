@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { GET_PRODUCTS_MOCKS } from '../../../../models/products-mocks.model';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';

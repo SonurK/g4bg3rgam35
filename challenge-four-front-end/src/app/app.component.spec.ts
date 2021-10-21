@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'shipping-label-maker'`, () => {
+  it(`should have as title 'challenge-four-front-end'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('shipping-label-maker');
+    expect(app.title).toEqual('challenge-four-front-end');
   });
 
   /* it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('shipping-label-maker app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('challenge-four-front-end app is running!');
   }); */
 });

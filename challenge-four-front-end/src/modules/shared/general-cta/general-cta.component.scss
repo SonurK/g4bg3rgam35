@@ -1,0 +1,28 @@
+.general-button {
+    width: 241px;
+    height: 56px;
+    border-radius: 59px;
+    border-color: transparent;
+    font: normal normal normal 20px/28px Helvetica Neue;
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+
+    &--default {
+        background: #683698 0% 0% no-repeat padding-box;
+        width: 286px;
+        height: 51px;
+    }
+
+    &--primary {
+        background: #683698 0% 0% no-repeat padding-box;
+        font: normal normal normal 40px/48px Helvetica Neue;
+        text-transform: uppercase;
+        width: 483px;
+        height: 112px;
+    }
+
+    &--secondary {
+        background: #00D087 0% 0% no-repeat padding-box;
+    }
+}

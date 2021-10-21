@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from '../../../services/login.service';
 import { AuthenticationService } from '../../../services/authentication.service';
@@ -11,6 +11,7 @@ import { AuthenticationService } from '../../../services/authentication.service'
 })
 export class LoginComponent implements OnInit {
 
+  public buttonTitle: string = 'Ingresar';
   public loginUserForm: FormGroup;
   public errorMark: boolean;
   public loading: boolean;
@@ -33,20 +34,8 @@ export class LoginComponent implements OnInit {
   }
 
   validateLogin() {
-    if (this.loginUserForm.valid) {
-      this.loading = true;
-      setTimeout(() => {
-        if (this.login.validateUser(this.loginUserForm)) {
-          this.loading = false;
-          this.errorMark = false;
-          this.authenticationService.setUser()
-          this.router.navigate([`shipping/shipping-label-maker/${this.loginUserForm.value.name}`]);
-        } else {
-          this.errorMark = true;
-          this.loading = false;
-        }
-      }, 1500);
-    }
+    this.authenticationService.setUser()
+    this.router.navigate([`homepage`]);
   }
 
 }

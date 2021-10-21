@@ -1,0 +1,24 @@
+.general-profile-banner {
+    display: flex;
+    align-items: center;
+
+    &-user-name {
+        display: flex;
+        width: 229px;
+        height: 51px;
+        background-color: rgba(217, 72, 236, 0.1);
+        border-radius: 26px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font: normal normal normal 30px/36px Helvetica Neue;
+        color: #707070;
+    }
+
+    &-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}

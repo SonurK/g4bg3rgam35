@@ -1,0 +1,28 @@
+.general-input {
+    width: 514px;
+    height: 52px;
+    background: #F2A47C 0% 0% no-repeat padding-box;
+    border-radius: 59px;
+    border-color: transparent;
+    opacity: 1;
+    color: #FFFFFF;
+
+    &--principal {
+        height: 60px;
+        width: 80%;
+        font: normal normal normal 20px/24px Helvetica Neue;
+        text-align: center;
+    }
+
+    &--small {
+        width: 414px;
+        height: 42px;
+        font: normal normal normal 18px/20px Helvetica Neue;
+        padding-left: 2%;
+    }
+
+    &::placeholder {
+        color: #f0cfbf;
+        text-transform: uppercase;
+    }
+}
