@@ -37,7 +37,7 @@ export class HomepageComponent implements OnInit {
   }
 
   viewMoreProducts() {
-    this.router.navigate([`categories`]);
+    this.router.navigate([`category`]);
   }
 
 }

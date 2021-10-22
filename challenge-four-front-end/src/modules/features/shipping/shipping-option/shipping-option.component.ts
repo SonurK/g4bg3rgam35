@@ -22,7 +22,6 @@ export class ShippingOptionComponent implements OnInit {
   }
 
   optionSelected(option) {
-    console.log("optionSelected", option);
   }
 
   getComponentState() {

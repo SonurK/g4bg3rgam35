@@ -1,4 +1,5 @@
 <section class="global-header">
-    <img class="global-header-logo" src="../../../assets/logo-image/PGDEALS.svg" alt="Logo Image">
+    <img class="global-header-logo rotate" src="../../../assets/logo-image/PGDEALS.svg" alt="Logo Image" (click)="goToHomepage()" >
+    <app-general-input *ngIf='isSearchIncluded' inputTitle='Busqueda' inputType='small'></app-general-input>
     <app-general-profile profileImageUrl={{profileImageUrl}} profileUserName={{profileUserName}}></app-general-profile>
 </section>

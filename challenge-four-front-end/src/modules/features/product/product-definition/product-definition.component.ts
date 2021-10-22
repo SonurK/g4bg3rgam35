@@ -21,8 +21,7 @@ export class ProductDefinitionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("Starting ngOnInit request");
-
+    
     this.getPokemonAbility();
     this.getPokemon();
     this.getPokedex();
@@ -32,7 +31,6 @@ export class ProductDefinitionComponent implements OnInit {
     this.httpClient.get("https://pokeapi.co/api/v2/ability/4/")
       .subscribe((data: any[]) => {
         console.error("subscribe");
-        console.log(data);
       })
   }
 
@@ -41,9 +39,9 @@ export class ProductDefinitionComponent implements OnInit {
       .toPromise()
       .then((responseData: any) => {
         console.error("toPromise");
-        console.log("responseData", responseData);
+        console.info("responseData", responseData);
       }).catch((errorResponseData) => {
-        console.log("errorResponseData", errorResponseData);
+        console.error("errorResponseData", errorResponseData);
       })
   }
 
@@ -51,9 +49,8 @@ export class ProductDefinitionComponent implements OnInit {
     this.requestService.request(RequestType.GET, RequestURL.POKEMON_POKEDEX, null, null)
       .then((pokedexData: any) => {
         console.error("request");
-        console.log("pokedexData", pokedexData);
+        console.info("pokedexData", pokedexData);
         this.pokedex = pokedexData.body?.results;
-        console.log("this.pokedex", this.pokedex);
       })
       .catch((pokedexError: any) => {
         console.error("pokedexError", pokedexError);

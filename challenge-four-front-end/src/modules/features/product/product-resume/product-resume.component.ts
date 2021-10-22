@@ -29,7 +29,6 @@ export class ProductResumeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("this.products", this.products);
     this.filteredOptions = this.weightFormControl.valueChanges.pipe(
       startWith(''),
       map(value => this._filter(value))

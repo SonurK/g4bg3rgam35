@@ -1,0 +1,11 @@
+<section class="body-wrapper">
+    <app-global-header profileImageUrl='https://pbs.twimg.com/profile_images/1055263632861343745/vIqzOHXj.jpg'
+        profileUserName='Carlos' isSearchIncluded={{true}}>
+    </app-global-header>
+    <section class="category-home">
+        <app-general-item-box *ngFor="let category of categories; let i = index" class="category-item-box"
+            itemBoxColor={{getItemBoxColor(i)}} itemText={{category.Name}}
+            itemImageUrl={{getItemImageUrl(category?.Picture?.url)}} itemType='default'>
+        </app-general-item-box>
+    </section>
+</section>

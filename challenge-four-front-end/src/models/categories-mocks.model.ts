@@ -294,8 +294,8 @@ export const LIST_CATEGORIES_MOCK: any = [
     },
     {
         "id": 8,
-        "Name": "Electrodomésticos",
-        "Description": "Venta de electrodomesticos para el hogar",
+        "Name": "Enseres",
+        "Description": "Venta de enseres para el hogar",
         "published_at": "2021-10-20T03:57:03.366Z",
         "created_at": "2021-10-20T03:57:02.675Z",
         "updated_at": "2021-10-20T03:57:03.377Z",

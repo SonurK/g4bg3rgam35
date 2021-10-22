@@ -21,12 +21,10 @@ export class ProductAdditionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("objectComponentBuilder", this.objectComponentBuilder);
   }
 
   addEvent(type: string, event: MatDatepickerInputEvent<Date>) {
     this.events.push(`${type}: ${event.value}`);
-    console.log("addEvent this.events", this.events);
     
   }
 
